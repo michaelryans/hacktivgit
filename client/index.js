@@ -1,5 +1,3 @@
-
-
 const app = require('express')()
 const router = require('./routers')
 
@@ -12,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.use('/git', router)
+app.use('/', router)
 
 const PORT = 3000
 app.listen(PORT, (req,res) => {
