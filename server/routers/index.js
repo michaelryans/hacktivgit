@@ -1,5 +1,9 @@
+require('dotenv').config()
 const router = require('express').Router()
 const UserController = require('../controllers/user')
+
+
+router.post('/login', UserController.login)
 
 //delete a star from authenticated user specific repo
 router.delete('/starred/:owner/:repo', UserController.unstar)
